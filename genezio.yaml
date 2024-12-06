@@ -1,4 +1,4 @@
-name: FinBudd-backend
+name: FinBuddy-backend
 region: us-east-1
 yamlVersion: 2
 backend:
