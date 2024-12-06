@@ -9,5 +9,5 @@ app.listen(PORT, () => {
   db();
   console.log(`Server listening on port ${PORT}`);
 });
-const serverlessHandler = ServerlessHttp(app);
-export default serverlessHandler;
+const handler = ServerlessHttp(app);
+export default handler;
