@@ -1,0 +1,13 @@
+name: FinBudd-backend
+region: us-east-1
+yamlVersion: 2
+backend:
+  path: ./
+  language:
+    name: js
+    packageManager: yarn 
+  functions:
+    - name: finbuddy-backend
+      path: ./
+      handler: handler
+      entry: server.js
