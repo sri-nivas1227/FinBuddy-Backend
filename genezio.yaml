@@ -6,6 +6,8 @@ backend:
     language:
         name: js
         packageManager: yarn
-    scripts:
-        deploy: yarn
-        local: yarn
+    functions:
+        - name: finbuddy-backend
+          path: ./
+          handler: handler
+          entry: server.js
