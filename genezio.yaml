@@ -1,19 +1,11 @@
-backend:
-    functions:
-        - entry: server.js
-          handler: handler
-          name: finbuddy-backend
-          path: ./
-          type: aws
-    language:
-        name: js
-        packageManager: yarn
-    path: ./
-    scripts:
-        deploy:
-            - yarn install
-        local:
-            - yarn install
 name: FinBuddy-backend
 region: us-east-1
 yamlVersion: 2
+backend:
+    path: .
+    language:
+        name: js
+        packageManager: yarn
+    scripts:
+        deploy: yarn
+        local: yarn
