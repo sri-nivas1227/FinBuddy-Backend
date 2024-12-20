@@ -1,13 +1,19 @@
-name: FinBuddy-backend
-region: us-east-1
-yamlVersion: 2
 backend:
-    path: .
+    functions:
+        - entry: server.js
+          handler: handler
+          name: function-express
+          path: ./
+          type: httpServer
     language:
         name: js
         packageManager: yarn
-    functions:
-        - name: finbuddy-backend
-          path: ./
-          handler: handler
-          entry: server.js
+    path: .
+    scripts:
+        deploy:
+            - yarn install
+        local:
+            - yarn install
+name: FinBuddy-backend
+region: us-east-1
+yamlVersion: 2
